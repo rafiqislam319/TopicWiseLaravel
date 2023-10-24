@@ -1,0 +1,7 @@
+//what has done here
+
+1. Resource Controller CRUD with Image
+2. Custom Validation with error message show
+3. Pagination
+4. Conditional form handling, i mean with single form store and update is perform
+5. Flash message with session

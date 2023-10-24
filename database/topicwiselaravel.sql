@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2023 at 01:23 PM
+-- Generation Time: Oct 24, 2023 at 03:14 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -20,6 +20,37 @@ SET time_zone = "+00:00";
 --
 -- Database: `topicwiselaravel`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `employees`
+--
+
+CREATE TABLE `employees` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `salary` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `employees`
+--
+
+INSERT INTO `employees` (`id`, `name`, `phone`, `salary`, `image`, `created_at`, `updated_at`) VALUES
+(1, 'Amari Dhak', '420', '78', NULL, '2023-10-23 10:35:51', '2023-10-23 10:35:51'),
+(3, 'John Doe', '01751614011', '78', '20231023171011.png', '2023-10-23 11:10:11', '2023-10-23 11:10:11'),
+(5, 'Jon', '2323', '3232', '20231024041534.png', '2023-10-23 22:15:35', '2023-10-23 22:15:35'),
+(6, 'June', '21212', '43434', '20231024042326.png', '2023-10-23 22:23:26', '2023-10-23 22:23:26'),
+(7, 'joe', '222', '33', '20231024130437.jpg', '2023-10-23 22:48:30', '2023-10-24 07:04:37'),
+(8, 'MD. RAFIQUL ISLAM', '01686313821', '1', '20231024045054.JPG', '2023-10-23 22:50:54', '2023-10-24 04:57:05'),
+(9, 'qwq', '3434', '343', '20231024130410.jpg', '2023-10-24 03:52:24', '2023-10-24 07:04:10'),
+(10, 'valo name', '21', '20000', '20231024130357.jpg', '2023-10-24 04:11:58', '2023-10-24 07:03:57'),
+(13, 'June', '22', '34343', '20231024130544.jpg', '2023-10-24 07:05:45', '2023-10-24 07:05:45');
 
 -- --------------------------------------------------------
 
@@ -54,10 +85,11 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2019_12_14_000001_create_personal_access_tokens_table', 1);
+(6, '2014_10_12_000000_create_users_table', 1),
+(7, '2014_10_12_100000_create_password_resets_table', 1),
+(8, '2019_08_19_000000_create_failed_jobs_table', 1),
+(9, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(10, '2023_10_23_144704_create_employees_table', 1);
 
 -- --------------------------------------------------------
 
@@ -112,6 +144,12 @@ CREATE TABLE `users` (
 --
 
 --
+-- Indexes for table `employees`
+--
+ALTER TABLE `employees`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -150,6 +188,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `employees`
+--
+ALTER TABLE `employees`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
 -- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -159,7 +203,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
